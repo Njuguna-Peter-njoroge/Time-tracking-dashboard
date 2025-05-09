@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red-work: hsl(15, 100%, 70%);
+    --Soft-blue-play: hsl(195, 74%, 62%);
+    --Light-red-study: hsl(348, 100%, 68%);
+    --Lime-green-exercise: hsl(145, 58%, 55%);
+    --Violet-social: hsl(264, 64%, 52%);
+    --Soft-orange-self-care: hsl(43, 84%, 65%);
+
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+body {
+    font-family: "Rubik", sans-serif;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: var(--Very-dark-blue);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1115px;
+    width: 100%;
+    height: 500px;
+}
+
+
+.right{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-top {
+    height: 355px;
+    width: 255px;
+    background-color: var(--Blue);
+    border-radius: 10px;
+    padding: 35px 25px;
+    z-index: 99;
+}
+
+.user-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding: 3px;
+    background-color: white;
+}
+
+.user-image img {
+    display: block;
+    max-width: 100%;
+}
+
+.user-report {
+    font-size: 15px;
+    color: var(--Pale-Blue);
+    margin-top: 45px;
+}
+
+.user-name {
+    font-size: 32px;
+    color: white;
+    font-weight: 300;
+    margin-top: 18px;
+}
+
+.user-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: 160px;
+    padding: 25px;
+    background-color: var(--Dark-blue);
+    color: var(--Desaturated-blue);
+    border-radius: 10px;
+}
+
+.user-bottom-item {
+    margin-bottom: 25px;
+}
+
+.user-bottom-item:nth-child(1) {
+    margin-top: 10px;
+}
+
+.user-bottom-item:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.user-bottom-item.active {
+    color: white;
+}
+
+
+.left {
+    margin-left: 20px;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.card {
+    position: relative;
+}
+
+.card-background {
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+    height: 30%;
+    border-radius: 10px;
+}
+
+.card-background.background-0 {
+    background-image: url("../images/icon-work.svg");
+    background-color: var(--Light-red-work);
+}
+
+.card-background.background-1 {
+    background-image: url("../images/icon-play.svg");
+    background-color: var(--Soft-blue-play);
+}
+
+.card-background.background-2 {
+    background-image: url("../images/icon-study.svg");
+    background-color: var(--Light-red-study);
+}
+
+.card-background.background-3 {
+    background-image: url("../images/icon-exercise.svg");
+    background-color: var(--Lime-green-exercise);
+}
+
+.card-background.background-4 {
+    background-image: url("../images/icon-social.svg");
+    background-color: var(--Violet-social);
+}
+
+.card-background.background-5 {
+    background-image: url("../images/icon-self-care.svg");
+    background-color: var(--Soft-orange-self-care);
+}
+
+.card-body {
+    position: absolute;
+    top: 51px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--Dark-blue);
+}
+
+.card-body:hover {
+    cursor: pointer;
+    background-color: var(--Desaturated-blue);
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-title p {
+    color: white;
+}
+
+.card-hrs {
+    margin-top: 38px;
+    margin-bottom: 15px;
+    font-size: 32px;
+    color: white;
+}
+@media screen and (max-width:375px) {
+    .main{
+    display: flex;
+    flex-wrap: column;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: var(--Very-dark-blue);
+    }
+}
