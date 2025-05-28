@@ -22,7 +22,7 @@ Install my-project with npm
 Clone the project
 
 ```bash
-  git clone (https://github.com/Njuguna-Peter-njoroge/Time-tracking-dashboard.git)
+  git clone ("https://github.com/Njuguna-Peter-njoroge/Time-tracking-dashboard.git")
 ```
 # developments
 include javascript and typescript for more interactivity
